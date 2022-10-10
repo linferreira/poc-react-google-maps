@@ -4,8 +4,10 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
+    "noImplicitAny": false,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -13,8 +15,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/common/*": ["src/common/*"],
+      "@/lib/*": ["lib/*"],
+      "@/constants": ["src/common/constants"],
+    },
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "./src/test"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.setup.js", "src/components/Map/Map.tsx"],
 }
