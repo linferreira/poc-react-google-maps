@@ -35,8 +35,8 @@ export default function SimpleMap() {
     libraries: ["places"],
   });
 
-  if (loadError) return "Error loading maps";
-  if (!isLoaded) return "Loading Maps";
+  if (loadError) return <p>Error loading maps</p>
+  if (!isLoaded) return <p>Loading Maps</p>
 
   return (
     <S.Container>
