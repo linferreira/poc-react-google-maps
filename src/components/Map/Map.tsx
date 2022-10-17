@@ -11,7 +11,7 @@ import usePlacesAutocomplete, {
 } from "use-places-autocomplete";
 import * as S from "./Map.styles";
 
-const key = process.env.NEXT_APP_GOOGLE_MAPS_API_KEY || "";
+const key = "AIzaSyAtW3GoGl8D39on7Z-JfJqUamIFJPleopw";
 
 const mapContainerStyle = {
   width: "100vw",
